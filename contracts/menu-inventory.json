@@ -1,0 +1,929 @@
+[
+  {
+    "id": "01",
+    "title": "مكتب الاستقبال",
+    "items": [
+      {
+        "id": "01.01",
+        "label": "استعلام عن القبول",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "01.02",
+        "label": "كتاب الزوار",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "01.03",
+        "label": "سجل المكالمات الهاتفية",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "01.04",
+        "label": "الإرسال البريدي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "01.05",
+        "label": "استلام بريدي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "01.06",
+        "label": "يشتكي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "01.07",
+        "label": "قائمة الغرض",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "title": "معلومات الطلاب",
+    "items": [
+      {
+        "id": "02.01",
+        "label": "تفاصيل الطالب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.02",
+        "label": "قبول الطالب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.03",
+        "label": "القبول عبر الإنترنت",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.04",
+        "label": "الطلاب المعاقون",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.05",
+        "label": "طالب متعدد الصفوف",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.06",
+        "label": "حذف مجمع",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.07",
+        "label": "فئات الطلاب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.08",
+        "label": "بيت الطالب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.09",
+        "label": "تعطيل السبب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.10",
+        "label": "استيراد الطلاب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.11",
+        "label": "سجل الطلاب التاريخي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.12",
+        "label": "تقرير أولياء الأمور",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.13",
+        "label": "بيانات دخول الطلاب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.14",
+        "label": "السيرة الذاتية",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "02.15",
+        "label": "نقل للفرع",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "تحصيل الرسوم",
+    "items": [
+      {
+        "id": "03.01",
+        "label": "تحصيل الرسوم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.02",
+        "label": "دفع/بحث رسوم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.03",
+        "label": "الرسوم المستحقة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.04",
+        "label": "سيد الرسوم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.05",
+        "label": "مجموعة الرسوم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.06",
+        "label": "نوع الرسوم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.07",
+        "label": "خصم الرسوم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.08",
+        "label": "رسوم ترحيل",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "03.09",
+        "label": "البنوك",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "الدخل",
+    "items": [
+      {
+        "id": "04.01",
+        "label": "وصف الدخل",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "04.02",
+        "label": "إضافة دخل",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "المصروفات",
+    "items": [
+      {
+        "id": "05.01",
+        "label": "أوصاف المصروف",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "05.02",
+        "label": "إضافة مصروف",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "الحضور",
+    "items": [
+      {
+        "id": "06.01",
+        "label": "حضور الطلاب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "06.02",
+        "label": "حضور QR",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "06.03",
+        "label": "الحضور حسب التاريخ",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "الامتحانات",
+    "items": [
+      {
+        "id": "07.01",
+        "label": "قائمة الامتحانات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "07.02",
+        "label": "جدول الامتحان",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "07.03",
+        "label": "سجل الدرجات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "07.04",
+        "label": "تقديرات الدرجات",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "title": "امتحانات CBSE",
+    "items": [
+      {
+        "id": "08.01",
+        "label": "الامتحانات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.02",
+        "label": "مجموعة الامتحانات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.03",
+        "label": "جدول الامتحان",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.04",
+        "label": "نتيجة الامتحان",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.05",
+        "label": "بطاقة قبول التصميم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.06",
+        "label": "طباعة بطاقة الدخول",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.07",
+        "label": "تصميم ماركشيت",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.08",
+        "label": "طباعة ماركشيت",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.09",
+        "label": "علامات الصف",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "08.10",
+        "label": "قسم العلامات",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "title": "امتحان CBSE",
+    "items": [
+      {
+        "id": "09.01",
+        "label": "امتحان",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "09.02",
+        "label": "جدول الامتحان",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "09.03",
+        "label": "طباعة ماركشيت",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "09.04",
+        "label": "قالب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "09.05",
+        "label": "تعيين المراقبة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "09.06",
+        "label": "بطاقة القبول",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "09.07",
+        "label": "التقارير",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "09.08",
+        "label": "جلسة",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "الأكاديمية",
+    "items": [
+      {
+        "id": "10.01",
+        "label": "الفصول والأقسام",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "10.02",
+        "label": "المواد",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "10.03",
+        "label": "تعيين المواد والمعلمين",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "10.04",
+        "label": "الجدول الأسبوعي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "10.05",
+        "label": "ترقية الطلاب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "10.06",
+        "label": "خطة الدرس",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "الواجب المنزلي",
+    "items": [
+      {
+        "id": "11.01",
+        "label": "وصف الواجب",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "مركز التحميل",
+    "items": [
+      {
+        "id": "12.01",
+        "label": "المواد القابلة للتنزيل",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "12.02",
+        "label": "يوتيوب تعليمي",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "المكتبة",
+    "items": [
+      {
+        "id": "13.01",
+        "label": "قائمة الكتب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "13.02",
+        "label": "إضافة كتاب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "13.03",
+        "label": "الإصدار والعودة",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "النقل",
+    "items": [
+      {
+        "id": "14.01",
+        "label": "المركبات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "14.02",
+        "label": "الخطوط",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "14.03",
+        "label": "نقاط الالتقاط",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "السكن",
+    "items": [
+      {
+        "id": "15.01",
+        "label": "الغرف",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "المخزون",
+    "items": [
+      {
+        "id": "16.01",
+        "label": "الأصناف",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "16.02",
+        "label": "حركة المخزون",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "الموارد البشرية",
+    "items": [
+      {
+        "id": "17.01",
+        "label": "دليل الموظفين",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "17.02",
+        "label": "الحضور والغياب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "17.03",
+        "label": "الرواتب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "17.04",
+        "label": "الإجازات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "17.05",
+        "label": "تقييم المعلمين",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "التواصل",
+    "items": [
+      {
+        "id": "18.01",
+        "label": "لوحة الإعلانات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "18.02",
+        "label": "إرسال رسالة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "18.03",
+        "label": "سجل الرسائل",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "الدورات الإلكترونية",
+    "items": [
+      {
+        "id": "19.01",
+        "label": "الدورات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "19.02",
+        "label": "بنك الأسئلة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "19.03",
+        "label": "الدفع دون اتصال",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "19.04",
+        "label": "تقرير الدورات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "19.05",
+        "label": "امتحانات أونلاين",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "الحصص المباشرة",
+    "items": [
+      {
+        "id": "20.01",
+        "label": "Zoom / Google Meet",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "20.02",
+        "label": "تقرير الحصص",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "السلوك",
+    "items": [
+      {
+        "id": "21.01",
+        "label": "تعيين حادث",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "21.02",
+        "label": "سجل الحوادث",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "title": "الشهادات والبطاقات",
+    "items": [
+      {
+        "id": "22.01",
+        "label": "إصدار شهادة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "22.02",
+        "label": "شهادة نقل",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "22.03",
+        "label": "بطاقة هوية",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "title": "الجبهة الأمامية",
+    "items": [
+      {
+        "id": "23.01",
+        "label": "الموقع التعريفي",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "الخريجون",
+    "items": [
+      {
+        "id": "24.01",
+        "label": "إدارة الخريجين",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "24.02",
+        "label": "أحداث الخريجين",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "title": "مركز الاستمرارية",
+    "items": [
+      {
+        "id": "25.01",
+        "label": "مركز الاستمرارية",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "title": "التقويم",
+    "items": [
+      {
+        "id": "26.01",
+        "label": "التقويم والمهام",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "title": "التقارير",
+    "items": [
+      {
+        "id": "27.01",
+        "label": "تقرير الطلاب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "27.02",
+        "label": "تقرير الرسوم",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "27.03",
+        "label": "الرسوم المتوازنة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "27.04",
+        "label": "حركات مالية",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "27.05",
+        "label": "تقرير الحضور",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "27.06",
+        "label": "درجات الامتحانات",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "title": "الرسائل الداخلية",
+    "items": [
+      {
+        "id": "28.01",
+        "label": "الرسائل",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "title": "الطالب",
+    "items": [
+      {
+        "id": "29.01",
+        "label": "ملفي الدراسي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "29.02",
+        "label": "سيرتي الذاتية",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "title": "ولي الأمر",
+    "items": [
+      {
+        "id": "30.01",
+        "label": "أبنائي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "30.02",
+        "label": "رسوم الأبناء",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "30.03",
+        "label": "واجب الأبناء",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "title": "النسخ الاحتياطي",
+    "items": [
+      {
+        "id": "31.01",
+        "label": "النسخ والاستعادة",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "title": "إعدادات النظام",
+    "items": [
+      {
+        "id": "32.01",
+        "label": "الإعداد العام",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.02",
+        "label": "شعار وخلفية الدخول",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.03",
+        "label": "تطبيق الهاتف المحمول",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.04",
+        "label": "لوحة الطالب / الوصي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.05",
+        "label": "مصاريف",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.06",
+        "label": "إنشاء معرف تلقائي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.07",
+        "label": "نوع الحضور",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.08",
+        "label": "إعداد الجلسة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.09",
+        "label": "إعداد الإخطار",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.10",
+        "label": "مراسلة واتساب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.11",
+        "label": "إعداد الرسائل القصيرة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.12",
+        "label": "إعداد البريد الإلكتروني",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.13",
+        "label": "طرق الدفع",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.14",
+        "label": "طباعة رأس التذييل",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.15",
+        "label": "الطباعة الحرارية",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.16",
+        "label": "إعداد CMS الأمامي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.17",
+        "label": "تصاريح الأدوار",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.18",
+        "label": "استرجاع البيانات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.19",
+        "label": "اللغات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.20",
+        "label": "عملة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.21",
+        "label": "إضافات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.22",
+        "label": "المستخدمون",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.23",
+        "label": "الوحدات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.24",
+        "label": "الحقول المخصصة",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.25",
+        "label": "إعداد كلمة التحقق",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.26",
+        "label": "حقول النظام",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.27",
+        "label": "تحديث الملف التعريفي للطالب",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.28",
+        "label": "القبول عبر الإنترنت",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.29",
+        "label": "أنواع الملفات",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.30",
+        "label": "قائمة الشريط الجانبي",
+        "status": "NOT_VERIFIED"
+      },
+      {
+        "id": "32.31",
+        "label": "تحديث النظام",
+        "status": "NOT_VERIFIED"
+      }
+    ]
+  }
+]

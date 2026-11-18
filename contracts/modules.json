@@ -1,0 +1,2079 @@
+[
+  {
+    "table": "branches",
+    "ar": "الفروع",
+    "en": "Branches",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ],
+    "group": "Students"
+  },
+  {
+    "table": "classes",
+    "ar": "الفصول والأقسام",
+    "en": "Classes",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist",
+      "student",
+      "parent"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "branch_id",
+        "ar": "الفرع",
+        "en": "Branch",
+        "kind": "relation",
+        "table": "branches",
+        "label": "name"
+      },
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "academic_year",
+        "ar": "السنة الدراسية",
+        "en": "Academic year",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name",
+      "academic_year"
+    ],
+    "group": "Academics"
+  },
+  {
+    "table": "students",
+    "ar": "تفاصيل الطالب",
+    "en": "Students",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist",
+      "accountant",
+      "student",
+      "parent"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "branch_id",
+        "ar": "الفرع",
+        "en": "Branch",
+        "kind": "relation",
+        "table": "branches",
+        "label": "name"
+      },
+      {
+        "name": "full_name",
+        "ar": "اسم الطالب",
+        "en": "Student name",
+        "kind": "text"
+      },
+      {
+        "name": "student_no",
+        "ar": "رقم الطالب",
+        "en": "Student number",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "full_name",
+      "student_no"
+    ],
+    "group": "Students"
+  },
+  {
+    "table": "admissions",
+    "ar": "استعلام عن القبول",
+    "en": "Admissions",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "branch_id",
+        "ar": "الفرع",
+        "en": "Branch",
+        "kind": "relation",
+        "table": "branches",
+        "label": "name"
+      },
+      {
+        "name": "applicant_name",
+        "ar": "اسم المتقدم",
+        "en": "Applicant name",
+        "kind": "text"
+      },
+      {
+        "name": "status",
+        "ar": "الحالة",
+        "en": "Status",
+        "kind": "select",
+        "options": [
+          "new",
+          "review",
+          "accepted",
+          "rejected"
+        ]
+      }
+    ],
+    "display": [
+      "applicant_name",
+      "status"
+    ],
+    "group": "Reception"
+  },
+  {
+    "table": "staff",
+    "ar": "دليل الموظفين",
+    "en": "Staff",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "branch_id",
+        "ar": "الفرع",
+        "en": "Branch",
+        "kind": "relation",
+        "table": "branches",
+        "label": "name"
+      },
+      {
+        "name": "full_name",
+        "ar": "اسم الموظف",
+        "en": "Staff name",
+        "kind": "text"
+      },
+      {
+        "name": "job_title",
+        "ar": "المسمى الوظيفي",
+        "en": "Job title",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "full_name",
+      "job_title"
+    ],
+    "group": "HR"
+  },
+  {
+    "table": "courses",
+    "ar": "الدورات",
+    "en": "Courses",
+    "read": [
+      "super_admin",
+      "admin",
+      "content_editor"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "content_editor"
+    ],
+    "fields": [
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text",
+        "optional": true
+      }
+    ],
+    "display": [
+      "title",
+      "description"
+    ],
+    "group": "LMS"
+  },
+  {
+    "table": "lessons",
+    "ar": "الدروس",
+    "en": "Lessons",
+    "read": [
+      "super_admin",
+      "admin",
+      "content_editor"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "content_editor"
+    ],
+    "fields": [
+      {
+        "name": "course_id",
+        "ar": "الدورة",
+        "en": "Course",
+        "kind": "relation",
+        "table": "courses",
+        "label": "title"
+      },
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "body",
+        "ar": "المحتوى",
+        "en": "Content",
+        "kind": "text",
+        "optional": true
+      },
+      {
+        "name": "position",
+        "ar": "الترتيب",
+        "en": "Position",
+        "kind": "integer"
+      }
+    ],
+    "display": [
+      "title",
+      "position"
+    ],
+    "group": "LMS"
+  },
+  {
+    "table": "enrollments",
+    "ar": "تسجيل الطلاب بالفصول",
+    "en": "Enrollments",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist",
+      "student",
+      "parent"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "student_id",
+        "ar": "الطالب",
+        "en": "Student",
+        "kind": "relation",
+        "table": "students",
+        "label": "full_name"
+      },
+      {
+        "name": "class_id",
+        "ar": "الصف",
+        "en": "Class",
+        "kind": "relation",
+        "table": "classes",
+        "label": "name"
+      }
+    ],
+    "display": [
+      "student_id",
+      "class_id"
+    ],
+    "group": "Academics"
+  },
+  {
+    "table": "attendance",
+    "ar": "حضور الطلاب",
+    "en": "Attendance",
+    "read": [
+      "super_admin",
+      "admin",
+      "student",
+      "parent"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "enrollment_id",
+        "ar": "التسجيل",
+        "en": "Enrollment",
+        "kind": "relation",
+        "table": "enrollments",
+        "label": "id"
+      },
+      {
+        "name": "attendance_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "status",
+        "ar": "الحالة",
+        "en": "Status",
+        "kind": "select",
+        "options": [
+          "present",
+          "absent",
+          "late",
+          "excused"
+        ]
+      }
+    ],
+    "display": [
+      "attendance_date",
+      "status",
+      "enrollment_id"
+    ],
+    "group": "Academics"
+  },
+  {
+    "table": "invoices",
+    "ar": "الرسوم المستحقة",
+    "en": "Fee invoices",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant",
+      "student",
+      "parent"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "student_id",
+        "ar": "الطالب",
+        "en": "Student",
+        "kind": "relation",
+        "table": "students",
+        "label": "full_name"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "amount",
+        "ar": "المبلغ",
+        "en": "Amount",
+        "kind": "decimal"
+      },
+      {
+        "name": "due_date",
+        "ar": "تاريخ الاستحقاق",
+        "en": "Due date",
+        "kind": "date"
+      }
+    ],
+    "display": [
+      "description",
+      "amount",
+      "currency",
+      "due_date"
+    ],
+    "rpc": "create_invoice",
+    "group": "Finance"
+  },
+  {
+    "table": "payments",
+    "ar": "تحصيل الرسوم",
+    "en": "Payments",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant",
+      "student",
+      "parent"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "invoice_id",
+        "ar": "الفاتورة",
+        "en": "Invoice",
+        "kind": "relation",
+        "table": "invoices",
+        "label": "description"
+      },
+      {
+        "name": "amount",
+        "ar": "المبلغ",
+        "en": "Amount",
+        "kind": "decimal"
+      }
+    ],
+    "display": [
+      "invoice_id",
+      "amount",
+      "created_at"
+    ],
+    "rpc": "record_payment",
+    "group": "Finance"
+  },
+  {
+    "table": "visit_purposes",
+    "ar": "قائمة الغرض",
+    "en": "Visit purposes",
+    "group": "Reception",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "visitors",
+    "ar": "كتاب الزوار",
+    "en": "Visitor book",
+    "group": "Reception",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "visitor_name",
+        "ar": "اسم الزائر",
+        "en": "Visitor",
+        "kind": "text"
+      },
+      {
+        "name": "purpose_id",
+        "ar": "الغرض",
+        "en": "Purpose",
+        "kind": "relation",
+        "table": "visit_purposes",
+        "label": "name"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "visitor_name",
+      "purpose_id",
+      "record_date",
+      "description"
+    ]
+  },
+  {
+    "table": "phone_calls",
+    "ar": "سجل المكالمات الهاتفية",
+    "en": "Phone calls",
+    "group": "Reception",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "caller",
+        "ar": "المتصل",
+        "en": "Caller",
+        "kind": "text"
+      },
+      {
+        "name": "phone",
+        "ar": "الهاتف",
+        "en": "Phone",
+        "kind": "text"
+      },
+      {
+        "name": "direction",
+        "ar": "الاتجاه",
+        "en": "Direction",
+        "kind": "select",
+        "options": [
+          "incoming",
+          "outgoing"
+        ]
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "caller",
+      "phone",
+      "direction",
+      "record_date"
+    ]
+  },
+  {
+    "table": "postal_records",
+    "ar": "البريد الوارد والصادر",
+    "en": "Postal register",
+    "group": "Reception",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "reference_no",
+        "ar": "المرجع",
+        "en": "Reference",
+        "kind": "text"
+      },
+      {
+        "name": "direction",
+        "ar": "الاتجاه",
+        "en": "Direction",
+        "kind": "select",
+        "options": [
+          "incoming",
+          "outgoing"
+        ]
+      },
+      {
+        "name": "party",
+        "ar": "الجهة",
+        "en": "Party",
+        "kind": "text"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "reference_no",
+      "direction",
+      "party",
+      "record_date"
+    ]
+  },
+  {
+    "table": "complaints",
+    "ar": "الشكاوى",
+    "en": "Complaints",
+    "group": "Reception",
+    "read": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "receptionist"
+    ],
+    "fields": [
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "status",
+        "ar": "الحالة",
+        "en": "Status",
+        "kind": "select",
+        "options": [
+          "open",
+          "closed"
+        ]
+      }
+    ],
+    "display": [
+      "title",
+      "description",
+      "record_date",
+      "status"
+    ]
+  },
+  {
+    "table": "student_categories",
+    "ar": "فئات الطلاب",
+    "en": "Student categories",
+    "group": "Students",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "student_houses",
+    "ar": "بيت الطالب",
+    "en": "Student houses",
+    "group": "Students",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "disable_reasons",
+    "ar": "تعطيل السبب",
+    "en": "Disable reasons",
+    "group": "Students",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "academic_years",
+    "ar": "السنوات الدراسية",
+    "en": "Academic years",
+    "group": "Academics",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "starts_on",
+        "ar": "البداية",
+        "en": "Starts",
+        "kind": "date"
+      },
+      {
+        "name": "ends_on",
+        "ar": "النهاية",
+        "en": "Ends",
+        "kind": "date"
+      }
+    ],
+    "display": [
+      "name",
+      "starts_on",
+      "ends_on"
+    ]
+  },
+  {
+    "table": "subjects",
+    "ar": "المواد",
+    "en": "Subjects",
+    "group": "Academics",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "code",
+        "ar": "الرمز",
+        "en": "Code",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name",
+      "code"
+    ]
+  },
+  {
+    "table": "teaching_assignments",
+    "ar": "تعيين المواد والمعلمين",
+    "en": "Teaching assignments",
+    "group": "Academics",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "class_id",
+        "ar": "الصف",
+        "en": "Class",
+        "kind": "relation",
+        "table": "classes",
+        "label": "name"
+      },
+      {
+        "name": "subject_id",
+        "ar": "المادة",
+        "en": "Subject",
+        "kind": "relation",
+        "table": "subjects",
+        "label": "name"
+      },
+      {
+        "name": "staff_id",
+        "ar": "الموظف",
+        "en": "Staff",
+        "kind": "relation",
+        "table": "staff",
+        "label": "full_name"
+      }
+    ],
+    "display": [
+      "class_id",
+      "subject_id",
+      "staff_id"
+    ]
+  },
+  {
+    "table": "timetable_entries",
+    "ar": "الجدول الأسبوعي",
+    "en": "Weekly timetable",
+    "group": "Academics",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "assignment_id",
+        "ar": "التعيين",
+        "en": "Assignment",
+        "kind": "relation",
+        "table": "teaching_assignments",
+        "label": "id"
+      },
+      {
+        "name": "weekday",
+        "ar": "اليوم",
+        "en": "Weekday",
+        "kind": "select",
+        "options": [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ]
+      },
+      {
+        "name": "period_no",
+        "ar": "الحصة",
+        "en": "Period",
+        "kind": "integer"
+      },
+      {
+        "name": "room",
+        "ar": "الغرفة",
+        "en": "Room",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "assignment_id",
+      "weekday",
+      "period_no",
+      "room"
+    ]
+  },
+  {
+    "table": "lesson_plans",
+    "ar": "خطة الدرس",
+    "en": "Lesson plans",
+    "group": "Academics",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "assignment_id",
+        "ar": "التعيين",
+        "en": "Assignment",
+        "kind": "relation",
+        "table": "teaching_assignments",
+        "label": "id"
+      },
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "assignment_id",
+      "title",
+      "record_date",
+      "description"
+    ]
+  },
+  {
+    "table": "exam_groups",
+    "ar": "مجموعة الامتحانات",
+    "en": "Exam groups",
+    "group": "Exams",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "curriculum",
+        "ar": "المنهج",
+        "en": "Curriculum",
+        "kind": "select",
+        "options": [
+          "general",
+          "CBSE"
+        ]
+      }
+    ],
+    "display": [
+      "name",
+      "curriculum"
+    ]
+  },
+  {
+    "table": "exams",
+    "ar": "الامتحانات",
+    "en": "Exams",
+    "group": "Exams",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "group_id",
+        "ar": "المجموعة",
+        "en": "Group",
+        "kind": "relation",
+        "table": "exam_groups",
+        "label": "name"
+      },
+      {
+        "name": "class_id",
+        "ar": "الصف",
+        "en": "Class",
+        "kind": "relation",
+        "table": "classes",
+        "label": "name"
+      },
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "starts_on",
+        "ar": "البداية",
+        "en": "Starts",
+        "kind": "date"
+      },
+      {
+        "name": "ends_on",
+        "ar": "النهاية",
+        "en": "Ends",
+        "kind": "date"
+      }
+    ],
+    "display": [
+      "group_id",
+      "class_id",
+      "title",
+      "starts_on"
+    ]
+  },
+  {
+    "table": "exam_schedules",
+    "ar": "جدول الامتحان",
+    "en": "Exam schedule",
+    "group": "Exams",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "exam_id",
+        "ar": "الامتحان",
+        "en": "Exam",
+        "kind": "relation",
+        "table": "exams",
+        "label": "title"
+      },
+      {
+        "name": "subject_id",
+        "ar": "المادة",
+        "en": "Subject",
+        "kind": "relation",
+        "table": "subjects",
+        "label": "name"
+      },
+      {
+        "name": "exam_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "start_time",
+        "ar": "الوقت HH:MM",
+        "en": "Time HH:MM",
+        "kind": "text"
+      },
+      {
+        "name": "max_marks",
+        "ar": "الدرجة القصوى",
+        "en": "Max marks",
+        "kind": "integer"
+      }
+    ],
+    "display": [
+      "exam_id",
+      "subject_id",
+      "exam_date",
+      "start_time"
+    ]
+  },
+  {
+    "table": "fee_types",
+    "ar": "نوع الرسوم",
+    "en": "Fee types",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "fee_groups",
+    "ar": "مجموعة الرسوم",
+    "en": "Fee groups",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "income_categories",
+    "ar": "وصف الدخل",
+    "en": "Income categories",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "expense_categories",
+    "ar": "أوصاف المصروف",
+    "en": "Expense categories",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "banks",
+    "ar": "البنوك",
+    "en": "Banks",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name"
+    ]
+  },
+  {
+    "table": "income_drafts",
+    "ar": "مسودات الدخل",
+    "en": "Income drafts",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "category_id",
+        "ar": "الفئة",
+        "en": "Category",
+        "kind": "relation",
+        "table": "income_categories",
+        "label": "name"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "amount",
+        "ar": "المبلغ",
+        "en": "Amount",
+        "kind": "decimal"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      }
+    ],
+    "display": [
+      "category_id",
+      "description",
+      "amount",
+      "record_date"
+    ]
+  },
+  {
+    "table": "expense_drafts",
+    "ar": "مسودات المصروف",
+    "en": "Expense drafts",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "accountant"
+    ],
+    "fields": [
+      {
+        "name": "category_id",
+        "ar": "الفئة",
+        "en": "Category",
+        "kind": "relation",
+        "table": "expense_categories",
+        "label": "name"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "amount",
+        "ar": "المبلغ",
+        "en": "Amount",
+        "kind": "decimal"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      }
+    ],
+    "display": [
+      "category_id",
+      "description",
+      "amount",
+      "record_date"
+    ]
+  },
+  {
+    "table": "staff_attendance",
+    "ar": "حضور الموظفين",
+    "en": "Staff attendance",
+    "group": "HR",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "staff_id",
+        "ar": "الموظف",
+        "en": "Staff",
+        "kind": "relation",
+        "table": "staff",
+        "label": "full_name"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "status",
+        "ar": "الحالة",
+        "en": "Status",
+        "kind": "select",
+        "options": [
+          "present",
+          "absent",
+          "late",
+          "excused"
+        ]
+      }
+    ],
+    "display": [
+      "staff_id",
+      "record_date",
+      "status"
+    ]
+  },
+  {
+    "table": "leave_requests",
+    "ar": "الإجازات",
+    "en": "Leave register",
+    "group": "HR",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "staff_id",
+        "ar": "الموظف",
+        "en": "Staff",
+        "kind": "relation",
+        "table": "staff",
+        "label": "full_name"
+      },
+      {
+        "name": "starts_on",
+        "ar": "من",
+        "en": "From",
+        "kind": "date"
+      },
+      {
+        "name": "ends_on",
+        "ar": "إلى",
+        "en": "To",
+        "kind": "date"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "status",
+        "ar": "الحالة",
+        "en": "Status",
+        "kind": "select",
+        "options": [
+          "requested",
+          "approved",
+          "rejected"
+        ]
+      }
+    ],
+    "display": [
+      "staff_id",
+      "starts_on",
+      "ends_on",
+      "description"
+    ]
+  },
+  {
+    "table": "salary_drafts",
+    "ar": "مسودات الرواتب",
+    "en": "Salary drafts",
+    "group": "HR",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "staff_id",
+        "ar": "الموظف",
+        "en": "Staff",
+        "kind": "relation",
+        "table": "staff",
+        "label": "full_name"
+      },
+      {
+        "name": "period_start",
+        "ar": "الفترة",
+        "en": "Period start",
+        "kind": "date"
+      },
+      {
+        "name": "base_amount",
+        "ar": "الراتب",
+        "en": "Base amount",
+        "kind": "decimal"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "staff_id",
+      "period_start",
+      "base_amount",
+      "description"
+    ]
+  },
+  {
+    "table": "teacher_evaluations",
+    "ar": "تقييم المعلمين",
+    "en": "Teacher evaluations",
+    "group": "HR",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "staff_id",
+        "ar": "الموظف",
+        "en": "Staff",
+        "kind": "relation",
+        "table": "staff",
+        "label": "full_name"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "score",
+        "ar": "التقييم من 100",
+        "en": "Score out of 100",
+        "kind": "integer"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "staff_id",
+      "record_date",
+      "score",
+      "description"
+    ]
+  },
+  {
+    "table": "homework",
+    "ar": "الواجبات",
+    "en": "Homework",
+    "group": "LMS",
+    "read": [
+      "super_admin",
+      "admin",
+      "student",
+      "parent"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "class_id",
+        "ar": "الصف",
+        "en": "Class",
+        "kind": "relation",
+        "table": "classes",
+        "label": "name"
+      },
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "due_date",
+        "ar": "التسليم",
+        "en": "Due date",
+        "kind": "date"
+      }
+    ],
+    "display": [
+      "class_id",
+      "title",
+      "description",
+      "due_date"
+    ]
+  },
+  {
+    "table": "live_sessions",
+    "ar": "الحصص المباشرة",
+    "en": "Live sessions",
+    "group": "LMS",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "class_id",
+        "ar": "الصف",
+        "en": "Class",
+        "kind": "relation",
+        "table": "classes",
+        "label": "name"
+      },
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "session_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "meeting_url",
+        "ar": "رابط الاجتماع",
+        "en": "Meeting URL",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "class_id",
+      "title",
+      "session_date",
+      "meeting_url"
+    ]
+  },
+  {
+    "table": "books",
+    "ar": "قائمة الكتب",
+    "en": "Books",
+    "group": "Library",
+    "read": [
+      "super_admin",
+      "admin",
+      "librarian"
+    ],
+    "write": [
+      "super_admin",
+      "admin",
+      "librarian"
+    ],
+    "fields": [
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "author",
+        "ar": "المؤلف",
+        "en": "Author",
+        "kind": "text"
+      },
+      {
+        "name": "catalog_no",
+        "ar": "رقم الفهرس",
+        "en": "Catalog number",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "title",
+      "author",
+      "catalog_no"
+    ]
+  },
+  {
+    "table": "vehicles",
+    "ar": "المركبات",
+    "en": "Vehicles",
+    "group": "Transport",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "plate_no",
+        "ar": "رقم اللوحة",
+        "en": "Plate",
+        "kind": "text"
+      },
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "capacity",
+        "ar": "السعة",
+        "en": "Capacity",
+        "kind": "integer"
+      }
+    ],
+    "display": [
+      "plate_no",
+      "name",
+      "capacity"
+    ]
+  },
+  {
+    "table": "transport_routes",
+    "ar": "الخطوط",
+    "en": "Transport routes",
+    "group": "Transport",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "vehicle_id",
+        "ar": "المركبة",
+        "en": "Vehicle",
+        "kind": "relation",
+        "table": "vehicles",
+        "label": "plate_no"
+      }
+    ],
+    "display": [
+      "name",
+      "vehicle_id"
+    ]
+  },
+  {
+    "table": "pickup_points",
+    "ar": "نقاط الالتقاط",
+    "en": "Pickup points",
+    "group": "Transport",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "route_id",
+        "ar": "الخط",
+        "en": "Route",
+        "kind": "relation",
+        "table": "transport_routes",
+        "label": "name"
+      },
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "position",
+        "ar": "الترتيب",
+        "en": "Position",
+        "kind": "integer"
+      }
+    ],
+    "display": [
+      "route_id",
+      "name",
+      "position"
+    ]
+  },
+  {
+    "table": "dorm_rooms",
+    "ar": "الغرف",
+    "en": "Dormitory rooms",
+    "group": "Operations",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "capacity",
+        "ar": "السعة",
+        "en": "Capacity",
+        "kind": "integer"
+      }
+    ],
+    "display": [
+      "name",
+      "capacity"
+    ]
+  },
+  {
+    "table": "inventory_items",
+    "ar": "الأصناف",
+    "en": "Inventory catalog",
+    "group": "Operations",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "ar": "الاسم",
+        "en": "Name",
+        "kind": "text"
+      },
+      {
+        "name": "sku",
+        "ar": "الرمز",
+        "en": "SKU",
+        "kind": "text"
+      },
+      {
+        "name": "unit",
+        "ar": "الوحدة",
+        "en": "Unit",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "name",
+      "sku",
+      "unit"
+    ]
+  },
+  {
+    "table": "announcements",
+    "ar": "لوحة الإعلانات",
+    "en": "Announcements",
+    "group": "Communication",
+    "read": [
+      "super_admin",
+      "admin",
+      "teacher",
+      "accountant",
+      "receptionist",
+      "librarian",
+      "student",
+      "parent",
+      "content_editor"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      },
+      {
+        "name": "status",
+        "ar": "الحالة",
+        "en": "Status",
+        "kind": "select",
+        "options": [
+          "draft",
+          "published"
+        ]
+      }
+    ],
+    "display": [
+      "title",
+      "description",
+      "record_date",
+      "status"
+    ]
+  },
+  {
+    "table": "calendar_events",
+    "ar": "التقويم والمهام",
+    "en": "Calendar events",
+    "group": "Communication",
+    "read": [
+      "super_admin",
+      "admin"
+    ],
+    "write": [
+      "super_admin",
+      "admin"
+    ],
+    "fields": [
+      {
+        "name": "title",
+        "ar": "العنوان",
+        "en": "Title",
+        "kind": "text"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "record_date",
+        "ar": "التاريخ",
+        "en": "Date",
+        "kind": "date"
+      }
+    ],
+    "display": [
+      "title",
+      "description",
+      "record_date"
+    ]
+  },
+  {
+    "table": "fee_balances",
+    "ar": "الرسوم المتوازنة",
+    "en": "Fee balances",
+    "group": "Finance",
+    "read": [
+      "super_admin",
+      "admin",
+      "accountant",
+      "student",
+      "parent"
+    ],
+    "write": [],
+    "fields": [
+      {
+        "name": "student_id",
+        "ar": "الطالب",
+        "en": "Student",
+        "kind": "relation",
+        "table": "students",
+        "label": "full_name"
+      },
+      {
+        "name": "description",
+        "ar": "الوصف",
+        "en": "Description",
+        "kind": "text"
+      },
+      {
+        "name": "amount",
+        "ar": "المبلغ",
+        "en": "Amount",
+        "kind": "decimal"
+      },
+      {
+        "name": "paid",
+        "ar": "المدفوع",
+        "en": "Paid",
+        "kind": "decimal"
+      },
+      {
+        "name": "balance",
+        "ar": "المتبقي",
+        "en": "Balance",
+        "kind": "decimal"
+      },
+      {
+        "name": "currency",
+        "ar": "العملة",
+        "en": "Currency",
+        "kind": "text"
+      }
+    ],
+    "display": [
+      "student_id",
+      "description",
+      "amount",
+      "paid",
+      "balance",
+      "currency"
+    ]
+  }
+]

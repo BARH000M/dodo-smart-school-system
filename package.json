@@ -1,0 +1,16 @@
+{
+  "name": "dodo-smart-school-system",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "setup:web": "npm --prefix web install",
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "typecheck": "npm --prefix web run typecheck",
+    "test": "node --test scripts/contracts.test.mjs",
+    "sync:contracts": "node scripts/sync-contracts.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

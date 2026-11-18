@@ -1,0 +1,11 @@
+# Required acceptance journeys (not yet executed)
+- Account: unauthenticated state, admin sign-in, app restart, logout, no stale private data between accounts.
+- School isolation: admins of A and B cannot see or modify each other's records. Verify school/branch/class controls separately.
+- Admissions: create enquiry → review → accepted; atomic enrollment is still required.
+- Academic: branch → class → student → enrollment → dated attendance; attempt duplicate enrollment and attendance; check data from other client.
+- Fee collection: invoice 100 → payment 30 → replay same request → balance 70; reject overpayment and non-accountant RPC; parent view only linked child. Test concurrent requests and refunds after implementation.
+- HR: create staff, record attendance, leave and salary draft; verify drafts do not affect accounts. Complete payroll posting as separate workflow.
+- Exams: create shared General or CBSE group → exam → schedule; both CBSE menus reuse service. Marks, moderation, publication and printing remain separate gates.
+- LMS: content editor course and lesson CRUD, admin homework → linked parent read. Student course access, submissions, assessment and progress not yet implemented.
+- Operations: add visitor/purpose, library catalog, vehicle/route/stop, room, stock catalog and announcements; ensure unrelated roles denied. Loans, stock ledger, occupancy and transport assignment require transactional tests.
+- Release: web build, real browser role journeys; Flutter analyze/test, Android debug build and device smoke; backup/restore on disposable database; full RLS/storage checks.

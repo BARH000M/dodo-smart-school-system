@@ -1,0 +1,68 @@
+
+> dodo-smart-school-system@0.2.0 test
+> node --test scripts/contracts.test.mjs
+
+TAP version 13
+# Subtest: reference inventory: 32 categories, 147 unique item IDs; both CBSE groups retained
+ok 1 - reference inventory: 32 categories, 147 unique item IDs; both CBSE groups retained
+  ---
+  duration_ms: 1.042797
+  type: 'test'
+  ...
+# Subtest: mobile and web use byte-identical module contract
+ok 2 - mobile and web use byte-identical module contract
+  ---
+  duration_ms: 1.238813
+  type: 'test'
+  ...
+# Subtest: module relationships, roles, fields and group declarations are consistent
+ok 3 - module relationships, roles, fields and group declarations are consistent
+  ---
+  duration_ms: 0.693334
+  type: 'test'
+  ...
+# Subtest: all modules map to a declared SQL table or security invoker view
+ok 4 - all modules map to a declared SQL table or security invoker view
+  ---
+  duration_ms: 0.580807
+  type: 'test'
+  ...
+# Subtest: new migrations are ordered, transactional and foundation is retained
+ok 5 - new migrations are ordered, transactional and foundation is retained
+  ---
+  duration_ms: 0.599118
+  type: 'test'
+  ...
+# Subtest: new operational tables have explicit RLS and immutable identity triggers
+ok 6 - new operational tables have explicit RLS and immutable identity triggers
+  ---
+  duration_ms: 1.229085
+  type: 'test'
+  ...
+# Subtest: scoped access and payment balances remain read-only in learner UI contract
+ok 7 - scoped access and payment balances remain read-only in learner UI contract
+  ---
+  duration_ms: 0.474743
+  type: 'test'
+  ...
+# Subtest: required client manifests and workspace entrypoints exist
+ok 8 - required client manifests and workspace entrypoints exist
+  ---
+  duration_ms: 0.324208
+  type: 'test'
+  ...
+# Subtest: operational register write permissions match SQL insert policy
+ok 9 - operational register write permissions match SQL insert policy
+  ---
+  duration_ms: 7.348109
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 79.04871

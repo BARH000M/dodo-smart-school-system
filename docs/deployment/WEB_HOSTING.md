@@ -1,0 +1,2 @@
+# Web hosting
+Build locally with `npm run build` from root; upload `web/dist/` to the approved static host only after test verification. Use HTTPS. Configure no-store on index.html, long cache on hashed assets, CSP after testing Supabase connect-src, and SPA fallback to index.html. Publishable key is public; never place a service-role key in Vite environment. Keep the old deployed build for rollback. DNS, hosting and public deployment have not been configured.
